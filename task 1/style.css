@@ -17,6 +17,7 @@ section{
     background-size: cover;
     background-position: center;
 }
+
 header{
     position: relative;
     top: 0;
@@ -109,6 +110,7 @@ label{
 }
 #check{
     z-index: 3;
+    display: none;
 }
 
 /* Responsive Styles */
@@ -140,5 +142,54 @@ label{
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
+
+    }
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+    #check:checked ~header label .menu-btn{
+        display: none;
+    }
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn{
+        position: absolute;
+        
+    }
+    label .menu-btn{
+        position: absolute;
+        bottom: -6px;
+    }
+    .content .info h2{
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .content .info h2 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
+    }
+ }
+ 
+ @media (max-width:650px){
+    .content .info h2{
+        font-size: 35px;
+        line-height: 40px;
+    }
+    .content .info h2 span{
+        font-size: 30px;
+        font-weight: 600;
+    }
+    .content .info p{
+        font-size: 14px;
     }
  }
